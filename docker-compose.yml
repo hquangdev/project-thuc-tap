@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0.36-debian
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: 1111
+      MYSQL_DATABASE: usermanager
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - spring-net
+
+  project-test:
+    build:
+      context: .
+    image: test-hkq
+    container_name: spring-app
+    depends_on:
+      - mysql
+    environment:
+      DBMS_CONNECTION: jdbc:mysql://mysql:3306/usermanager
+      DBMS_NAME: root
+      DBMS_PASS: 1111
+    ports:
+      - "8080:8080"
+    networks:
+      - spring-net
+
+volumes:
+  mysql_data:
+
+networks:
+  spring-net:

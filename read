@@ -1,0 +1,15 @@
+b1: tạo image
+docker build -t name
+
+b2: tạo container và run
+docker-compose up --build
+
+sau khi build khi chạy thì gõ
+docker-compose up
+
+# cách xem data khi lưu
+b1: truy cập vào docker: docker exec -it mysql-db bash
+b2: mysql -u root -p
+b3: show databases -> show tables -> select table đó để xem
+
+
