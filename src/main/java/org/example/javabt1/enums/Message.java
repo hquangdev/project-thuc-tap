@@ -12,9 +12,10 @@ public enum Message {
     GET_ALL_USER_SUCCESS(1002, "Bạn đã lấy danh sách tài khoản thành công", HttpStatus.OK),
     UPDATE_USER_SUCCESS(1003, "Bạn đã cập nhật tài khoản thành công", HttpStatus.OK),
     ADD_PRODUCT_SUCCESS(2000, "Bạn đã tạo sản phẩm thành công", HttpStatus.OK),
-    GET_PRODUCT_SUCCESS(2001, "Bạn đã lấy sản phẩm thành công", HttpStatus.OK),
+    GET_PRODUCT_SUCCESS(2001, "Bạn đã lấy thành công", HttpStatus.OK),
     DELETE_SUCCESS(2002, "Bạn đã xóa thành công", HttpStatus.OK),
-    UPDATE_SUCCESS(2003, "Bạn đã cập nhật sản phẩm thành công", HttpStatus.OK),
+    UPDATE_SUCCESS(2003, "Bạn đã cập nhật thành công", HttpStatus.OK),
+    ADD_CATEGORY_SUCCESS(3000, "Bạn đã tạo danh mục thành công", HttpStatus.OK),
 
 
 

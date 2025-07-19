@@ -120,7 +120,7 @@ public class UserServiceImpl implements UserService {
 
         JWTClaimsSet jwtClaimSet = new JWTClaimsSet.Builder()
                 .subject(user.getUsername())
-                .issuer("quang.com")
+                .issuer("giang.com")
                 .claim("scope", buildScope(user))
                 .expirationTime(new Date(Instant.now().plus(7, ChronoUnit.DAYS).toEpochMilli()))
                 .issueTime(new Date())

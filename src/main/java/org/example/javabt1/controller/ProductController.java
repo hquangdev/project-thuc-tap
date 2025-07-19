@@ -7,7 +7,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.javabt1.dto.ResponseDto;
 import org.example.javabt1.dto.request.ProductRequest;
-import org.example.javabt1.entity.Product;
+import org.example.javabt1.dto.response.ProductResponse;
 import org.example.javabt1.service.servicesimpl.ProductServiceImpl;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -43,7 +43,7 @@ public class ProductController {
 
     @Operation(summary = "Get All Product", description = "Lấy danh sách sản phẩm")
     @GetMapping()
-    public ResponseEntity<ResponseDto<List<Product>>> getAll(
+    public ResponseEntity<ResponseDto<List<ProductResponse>>> getAll(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
         return productService.getAll(page, size);

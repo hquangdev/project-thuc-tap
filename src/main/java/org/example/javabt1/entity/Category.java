@@ -7,20 +7,15 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDate;
 
-@Entity(name = "product")
+@Entity(name = "category")
 @Data
-public class Product {
+public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String description;
-    private int quantity;
-    private Double price;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Category category;
+    private String content;
 
     @CreationTimestamp
     @Column(updatable = false)
