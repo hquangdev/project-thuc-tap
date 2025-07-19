@@ -25,7 +25,7 @@ import javax.crypto.spec.SecretKeySpec;
 public class SecurityConfiguration {
     protected static final String SINGER_KEY = "LDzDIQeFNWXeWjG/yQ3yQz0cNJY2QAx08t5vyu7/E1ZaYZNsaSzaQBQ/nhWH591f";
 
-    private final String[] PUBLIC_ENDPOINTS = {"/user", "/user/login", "/swagger-ui/**", "/v3/api-docs/**",};
+    private final String[] PUBLIC_ENDPOINTS = {"/user/register", "/user/login", "/swagger-ui/**", "/v3/api-docs/**",};
 
     @Bean
     public PasswordEncoder passwordEncoder() {

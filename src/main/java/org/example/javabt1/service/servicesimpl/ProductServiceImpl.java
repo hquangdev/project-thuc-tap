@@ -29,6 +29,7 @@ public class ProductServiceImpl implements ProductService {
         Product product = new Product();
         product.setName(productRequest.getName());
         product.setDescription(productRequest.getDescription());
+        product.setQuantity(productRequest.getQuantity());
         product.setPrice(productRequest.getPrice());
         productRepository.save(product);
         return ResponseBuilder.okResponse(Message.ADD_PRODUCT_SUCCESS, product);
@@ -40,6 +41,7 @@ public class ProductServiceImpl implements ProductService {
 
         product.setName(updatedProduct.getName());
         product.setPrice(updatedProduct.getPrice());
+        product.setQuantity(updatedProduct.getQuantity());
         product.setDescription(updatedProduct.getDescription());
 
         productRepository.save(product);
@@ -69,7 +71,5 @@ public class ProductServiceImpl implements ProductService {
 
         return ResponseBuilder.okResponseWithPage(Message.GET_PRODUCT_SUCCESS, productPage);
     }
-
-
 
 }

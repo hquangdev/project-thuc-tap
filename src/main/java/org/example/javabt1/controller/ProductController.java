@@ -49,7 +49,7 @@ public class ProductController {
         return productService.getAll(page, size);
     }
 
-
+    @PreAuthorize("hasRole('USER')")
     @Operation(summary = "get Product", description = "lấy 1 sản phẩm")
     @GetMapping("/{id}")
     public ResponseEntity<ResponseDto<Object>> getProduct(@PathVariable Long id) {

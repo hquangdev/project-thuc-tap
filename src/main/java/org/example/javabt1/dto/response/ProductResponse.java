@@ -8,6 +8,7 @@ public class ProductResponse {
     private Long id;
     private String name;
     private String description;
+    private int quantity;
     private Double price;
 
 
@@ -15,6 +16,7 @@ public class ProductResponse {
         this.id = product.getId();
         this.name = product.getName();
         this.price = product.getPrice();
+        this.quantity = product.getQuantity();
         this.description = product.getDescription();
     }
 }

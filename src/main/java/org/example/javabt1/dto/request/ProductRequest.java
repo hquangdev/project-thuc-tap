@@ -9,5 +9,6 @@ public class ProductRequest {
     @NotBlank(message = "Không được bỏ trống")
     private String name;
     private String description;
+    private int quantity;
     private Double price;
 }

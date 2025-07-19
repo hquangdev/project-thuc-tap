@@ -20,7 +20,7 @@ public class RegisterUserController {
     private final UserServiceImpl userService;
 
     @Operation(summary = "Register", description = "API đăng ký tài khoản")
-    @PostMapping
+    @PostMapping("/register")
     public ResponseEntity<ResponseDto<Object>> registerUser(@RequestBody @Valid UserRequest userRequest) {
         return userService.registerUser(userRequest);
     }
